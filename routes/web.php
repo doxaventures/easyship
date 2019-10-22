@@ -19,7 +19,7 @@ Route::get('/index',function(){
     return view('pages.index');
 });
 Route::middleware('cors')->group(function () {
-    Route::get('/api','APiController@index');
+    Route::get('/api','ApiController@index');
     Route::get('/api/draft_order','APiController@create_draft_order');
     Route::get('/orders','OrderController@get_orders');
     Route::get('/ship','OrderController@create_labels');
