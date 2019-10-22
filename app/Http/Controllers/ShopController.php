@@ -15,7 +15,7 @@ class ShopController extends Controller
         if ($_GET["shop"]) {
             $shopUrl = $_GET["shop"];
             $scope = ["read_orders", "read_products","write_draft_orders","read_draft_orders","read_orders","write_orders","read_checkouts","write_checkouts"];
-            $redirectUrl = 'http://127.0.0.1:8000/auth';
+            $redirectUrl = 'https://easyship.shopifyapplications.com/auth';
             $shopify = Shopify::setShopUrl($shopUrl);
             return redirect()->to($shopify->getAuthorizeUrl($scope, $redirectUrl));
         } else {
