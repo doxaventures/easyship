@@ -13,34 +13,36 @@ class CreateAddressesTable extends Migration
      */
     public function up()
     {
-        Schema::create('addresses', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->longText('courier_id');
-            $table->float('price');
-            $table->longText('draft_order_id');
-            $table->string('sender_country');
-            $table->string('sender_postal_code')->nullable();
-            $table->string('sender_city')->nullable();
-            $table->string('sender_state')->nullable();
-            $table->longText('sender_address1');
-            $table->string('sender_address2')->nullable();
-            $table->string('sender_name')->nullable();
-            $table->string('sender_company')->nullable();
-            $table->string('sender_contact')->nullable();
-            $table->string('sender_email')->nullable();
+        if (!Schema::hasTable('addresses')) {
+            Schema::create('addresses', function (Blueprint $table) {
+                $table->bigIncrements('id');
+                $table->longText('courier_id');
+                $table->float('price');
+                $table->longText('draft_order_id');
+                $table->string('sender_country');
+                $table->string('sender_postal_code')->nullable();
+                $table->string('sender_city')->nullable();
+                $table->string('sender_state')->nullable();
+                $table->longText('sender_address1');
+                $table->string('sender_address2')->nullable();
+                $table->string('sender_name')->nullable();
+                $table->string('sender_company')->nullable();
+                $table->string('sender_contact')->nullable();
+                $table->string('sender_email')->nullable();
 
-            $table->string('reciever_country');
-            $table->string('reciever_postal_code')->nullable();
-            $table->string('reciever_city')->nullable();
-            $table->string('reciever_state')->nullable();
-            $table->longText('reciever_address1');
-            $table->string('reciever_address2')->nullable();
-            $table->string('reciever_name')->nullable();
-            $table->string('reciever_company')->nullable();
-            $table->string('reciever_contact')->nullable();
-            $table->string('reciever_email')->nullable();
-            $table->timestamps();
-        });
+                $table->string('reciever_country');
+                $table->string('reciever_postal_code')->nullable();
+                $table->string('reciever_city')->nullable();
+                $table->string('reciever_state')->nullable();
+                $table->longText('reciever_address1');
+                $table->string('reciever_address2')->nullable();
+                $table->string('reciever_name')->nullable();
+                $table->string('reciever_company')->nullable();
+                $table->string('reciever_contact')->nullable();
+                $table->string('reciever_email')->nullable();
+                $table->timestamps();
+            });
+        }
     }
 
     /**

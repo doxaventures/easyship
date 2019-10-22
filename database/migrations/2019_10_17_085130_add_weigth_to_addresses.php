@@ -13,9 +13,11 @@ class AddWeigthToAddresses extends Migration
      */
     public function up()
     {
-        Schema::table('addresses', function (Blueprint $table) {
-            $table->float('weight');
-        });
+        if (!Schema::hasTable('addresses')) {
+            Schema::table('addresses', function (Blueprint $table) {
+                $table->float('weight');
+            });
+        }
     }
 
     /**
