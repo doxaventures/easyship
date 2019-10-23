@@ -19,11 +19,11 @@ class CreateAddressesTable extends Migration
                 $table->longText('courier_id');
                 $table->float('price');
                 $table->longText('draft_order_id');
-                $table->string('sender_country');
+                $table->string('sender_country')->nullable();
                 $table->string('sender_postal_code')->nullable();
                 $table->string('sender_city')->nullable();
                 $table->string('sender_state')->nullable();
-                $table->longText('sender_address1');
+                $table->longText('sender_address1')->nullable();
                 $table->string('sender_address2')->nullable();
                 $table->string('sender_name')->nullable();
                 $table->string('sender_company')->nullable();
