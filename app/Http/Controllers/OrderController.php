@@ -203,7 +203,7 @@ public function create_order($order,$all){
 
     }
     else{
-        return redirect('/');
+        return redirect('/dashboard');
     }
 
     //return $this->create_labels($orders);

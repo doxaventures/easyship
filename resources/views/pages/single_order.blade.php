@@ -135,35 +135,6 @@
             <div class="col-12">
                 <div class="card">
                     <div class="card-body">
-                        <h4 class="card-title"> Customer Details</h4>
-                    </div>
-                    <div class="table-responsive">
-                        <table class="table table-hover">
-                            <thead>
-                            <tr>
-                                <th class="border-top-0"> ID</th>
-                                <th class="border-top-0"> Name</th>
-                                <th class="border-top-0"> Total Orders</th>
-
-                            </tr>
-                            </thead>
-                            <tbody>
-                            @foreach($order_single as $order_details)
-                                <tr>
-
-                                    <td class="">{{$order_details->customer_id}}</td>
-                                    <td class="">{{$order_details->customer_name}}</td>
-                                    <td><span class="">{{$order_details->customer_total_orders}}</span></td>
-                                </tr>
-                            @endforeach
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12">
-                <div class="card">
-                    <div class="card-body">
                         <h4 class="card-title"> Billing Details</h4>
                     </div>
                     <div class="table-responsive">
