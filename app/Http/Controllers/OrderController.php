@@ -231,7 +231,7 @@ curl_setopt($ch, CURLOPT_POST, TRUE);
 curl_setopt($ch, CURLOPT_POSTFIELDS, "{
   \"shipments\": [
     {
-      \"easyship_shipment_id\": \"$ship_id\",
+      \"easyship_shipment_id\": \"ESUS10018029\",
       \"courier_id\": \"$c_id\"
     }
   ]
