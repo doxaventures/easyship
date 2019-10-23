@@ -13,7 +13,7 @@ class CreateOrdersTable extends Migration
      */
     public function up()
     {
-        if (!Schema::hasTable('orders')) {
+
             Schema::create('orders', function (Blueprint $table) {
                 $table->bigIncrements('id');
                 $table->longText('order_created_at');
@@ -36,7 +36,7 @@ class CreateOrdersTable extends Migration
                 $table->string('total_charges');
                 $table->timestamps();
             });
-        }
+
     }
 
     /**
