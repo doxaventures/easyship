@@ -13,7 +13,7 @@ class AddCutomerInfo extends Migration
      */
     public function up()
     {
-        if (!Schema::hasTable('orders')) {
+
             Schema::table('orders', function (Blueprint $table) {
                 $table->longText('customer_id');
                 $table->longText('order_id');
@@ -22,7 +22,7 @@ class AddCutomerInfo extends Migration
                 $table->longText('customer_name');
                 $table->bigInteger('customer_total_orders');
             });
-        }
+
     }
 
     /**

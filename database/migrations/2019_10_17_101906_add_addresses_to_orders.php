@@ -13,12 +13,12 @@ class AddAddressesToOrders extends Migration
      */
     public function up()
     {
-        if (!Schema::hasTable('orders')) {
+
             Schema::table('orders', function (Blueprint $table) {
                 $table->longText('address1');
                 $table->longText('address2')->nullable();
             });
-        }
+
     }
 
     /**

@@ -13,7 +13,7 @@ class AddBillingDetails extends Migration
      */
     public function up()
     {
-        if (!Schema::hasTable('orders')) {
+
             Schema::table('orders', function (Blueprint $table) {
                 $table->longText('billing_email')->nullable();
                 $table->string('order_no');
@@ -30,7 +30,7 @@ class AddBillingDetails extends Migration
                 $table->longText('billing_country_code')->nullable();
                 $table->string('billing_province_code')->nullable();
             });
-        }
+
     }
 
     /**
