@@ -26,7 +26,6 @@
                                 <th class="border-top-0">Order STATUS</th>
                                 <th class="border-top-0">Order Placed Date</th>
                                 <th class="border-top-0">Order Total Price</th>
-                                <th class="border-top-0">Store Name</th>
                                 <th class="border-top-0">Action</th>
                             </tr>
                             </thead>
@@ -37,8 +36,8 @@
                                 <td class="txt-oflo">{{$order_details->order_id}}</td>
                                 <td><span class="label label-info label-rounded">{{$order_details->order_status}}</span> </td>
                                 <td class="txt-oflo">{{ Carbon\Carbon::parse($order_details->order_created_at)->format('l jS \\ F Y h:i:s A')}}</td>
-                                <td><span class="font-medium">{{$order_details->total_charges}}</span></td>
-                                <td><span class="font-medium">{{$order_details->store_name}}</span></td>
+                                <td><span class="font-medium">$ {{$order_details->total_charges}}</span></td>
+
                                 <td><span style="padding-right: 10px;"><a href="{{route('get_single_order',$order_details->id)}}"><i class="fa fa-eye"></i></a></span><span><a href=""> <i class="fa fa-trash" aria-hidden="true"></i></a></span></td>
                             </tr>
                             @endforeach

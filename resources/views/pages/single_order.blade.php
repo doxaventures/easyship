@@ -42,7 +42,7 @@
                                     <td class="txt-oflo">{{$order_details->order_id}}</td>
                                     <td><span class="label label-info label-rounded">{{$order_details->order_status}}</span> </td>
                                     <td class="txt-oflo">{{ Carbon\Carbon::parse($order_details->order_created_at)->format('l jS \\ F Y h:i:s A')}}</td>
-                                    <td><span class="font-medium">{{$order_details->total_charges}}</span></td>
+                                    <td><span class="font-medium">$ {{$order_details->total_charges}}</span></td>
                                     <td><span class="font-medium">{{$order_details->gateway}}</span></td>
                                 </tr>
                             @endforeach
@@ -117,7 +117,7 @@
                                     <td class="txt-oflo">{{$order_details->courier_id}}</td>
                                     <td class="txt-oflo">{{$order_details->courier_name}}</td>
                                     <td><span class="font-medium">{{$order_details->delivery_time}}</span></td>
-                                    <td><span class="font-medium">{{$order_details->total_charges}}</span></td>
+                                    <td><span class="font-medium">$ {{$order_details->total_charges}}</span></td>
                                     <td><span class="font-medium">{{$order_details->shipment_state}}</span></td>
                                 </tr>
                             @endforeach
