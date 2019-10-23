@@ -13,7 +13,7 @@ class CreateAddressesTable extends Migration
      */
     public function up()
     {
-        if (!Schema::hasTable('addresses')) {
+
             Schema::create('addresses', function (Blueprint $table) {
                 $table->bigIncrements('id');
                 $table->longText('courier_id');
@@ -43,7 +43,7 @@ class CreateAddressesTable extends Migration
                 $table->timestamps();
             });
         }
-    }
+
 
     /**
      * Reverse the migrations.

@@ -13,13 +13,13 @@ class AddColumnToAddresses extends Migration
      */
     public function up()
     {
-        if (!Schema::hasTable('addresses')) {
+
             Schema::table('addresses', function (Blueprint $table) {
                 $table->bigInteger('width');
                 $table->bigInteger('height');
                 $table->bigInteger('length');
             });
-        }
+
     }
 
     /**

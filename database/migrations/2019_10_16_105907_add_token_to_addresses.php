@@ -13,12 +13,12 @@ class AddTokenToAddresses extends Migration
      */
     public function up()
     {
-        if (!Schema::hasTable('addresses')) {
+
             Schema::table('addresses', function (Blueprint $table) {
                 $table->longText('token');
                 //
             });
-        }
+
     }
 
     /**

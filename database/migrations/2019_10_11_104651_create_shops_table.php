@@ -13,14 +13,14 @@ class CreateShopsTable extends Migration
      */
     public function up()
     {
-        if(!Schema::hasTable('shops')) {
+
             Schema::create('shops', function (Blueprint $table) {
                 $table->bigIncrements('id');
                 $table->text('shop_name');
                 $table->text('access_token');
                 $table->timestamps();
             });
-        }
+
     }
 
     /**
