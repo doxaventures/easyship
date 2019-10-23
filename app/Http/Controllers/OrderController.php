@@ -202,7 +202,7 @@ public function create_order($order,$all){
         return redirect('/');
     }
     else{
-        return redirect('/');
+        return $this->create_labels($check_order_id);
     }
 
     //return $this->create_labels($orders);
@@ -231,7 +231,7 @@ curl_setopt($ch, CURLOPT_POST, TRUE);
 curl_setopt($ch, CURLOPT_POSTFIELDS, "{
   \"shipments\": [
     {
-      \"easyship_shipment_id\": \"ESUS10018029\",
+      \"easyship_shipment_id\": \"$ship_id\",
       \"courier_id\": \"$c_id\"
     }
   ]
@@ -239,7 +239,7 @@ curl_setopt($ch, CURLOPT_POSTFIELDS, "{
 
 curl_setopt($ch, CURLOPT_HTTPHEADER, array(
     "Content-Type: application/json",
-    "Authorization: Bearer sand_J2Si3etPDdwnHByt1kw38IUyVeLoxoQYdfOSWSSLf+w="
+    "Authorization: Bearer prod_UdV6vE+NNY6kn6Z6uuija2no0hw0SCGMtZRlJ3DRvrk="
 ));
 
 $response = curl_exec($ch);
