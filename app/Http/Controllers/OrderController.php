@@ -155,8 +155,7 @@ public function create_order($order,$all){
     $selected_courier_name=$order->shipment->selected_courier->name;
     $selected_courier_delivery_time=$order->shipment->selected_courier->min_delivery_time.' '.'to'.' ' . $order->shipment->selected_courier->max_delivery_time.' '.' '.'days' ;
     $selected_courier_total_charges=$order->shipment->selected_courier->total_charge;
-    dd($order__id);
-    $check_order_id=Order::where('order_id',$order__id);
+    $check_order_id=Order::where('order_id',$order__id)->first();
     if(!$check_order_id){
         dd($order);
         $orders=new Order();
