@@ -20,7 +20,7 @@ Route::get('/index',function(){
 });
 Route::middleware('cors')->group(function () {
     Route::get('/api','ApiController@index');
-    Route::get('/api/draft_order','APiController@create_draft_order');
+    Route::get('/api/draft_order','ApiController@create_draft_order');
     Route::get('/orders','OrderController@get_orders');
     Route::get('/ship','OrderController@create_labels');
     Route::get('/','OrderController@get_all_orders')->name('get_all_orders');
