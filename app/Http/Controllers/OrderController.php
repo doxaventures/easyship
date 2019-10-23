@@ -214,7 +214,6 @@ public function get_all_orders(){
 }
 public function get_single_orders($id){
 $order_single=Order::where('id',$id)->get();
-dd($order_single);
 return view('pages.single_order',compact('order_single'));
 
 }
