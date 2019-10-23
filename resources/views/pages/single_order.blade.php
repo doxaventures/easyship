@@ -74,7 +74,6 @@
                             <tbody>
                             @foreach($order_single as $order_details)
                                 <tr>
-
                                     <td class="txt-oflo">{{$order_details->destination_name}}</td>
                                     <td><span class="label label-info label-rounded">{{$order_details->destination_state}}</span> </td>
                                     <td class="txt-oflo">{{$order_details->destination_city}}</td>
