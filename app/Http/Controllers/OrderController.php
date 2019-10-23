@@ -233,9 +233,6 @@ curl_setopt($ch, CURLOPT_POSTFIELDS, "{
     {
       \"easyship_shipment_id\": \"$ship_id\",
       \"courier_id\": \"$c_id\"
-    },
-    {
-      \"easyship_shipment_id\": \"$ship_id\"
     }
   ]
 }");
