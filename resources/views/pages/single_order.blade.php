@@ -16,15 +16,16 @@
             <div class="col-12">
                 <div class="card">
                     <div class="card-body">
-                        <div class="col-md-6">
-                            <h4 class="card-title"> Single Orders Details</h4>
-                        </div>
-                        <div class="col-md-6">
-                            @foreach($order_single as $order_details)
-                            <h6 class="card-title"><td><span class="font-medium">Order Name  {{$order_details->order_no}}</span></td></h6>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h4 class="card-title"> Single Orders Details</h4>
+                            </div>
+                            <div class="col-md-6">
+                                @foreach($order_single as $order_details)
+                                    <h5 class="card-title"><td><span class="font-medium">Order Name  {{$order_details->order_no}}</span></td></h5>
                                 @endforeach
+                            </div>
                         </div>
-
                     </div>
                     <div class="table-responsive">
                         <table class="table table-hover">
