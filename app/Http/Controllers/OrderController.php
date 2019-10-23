@@ -202,7 +202,7 @@ public function create_order($order,$all){
         return redirect('/');
     }
     else{
-        return $this->create_labels($check_order_id);
+        return redirect('/');
     }
 
     //return $this->create_labels($orders);
