@@ -66,7 +66,7 @@ $res=json_decode($response);
 
     public function create_draft_order(Request $request){
        $price= $request->input('price');
-        $draft_orders = $this->helper->getShop('the-dev-studio.myshopify.com')->call([
+        $draft_orders = $this->helper->getShop('theme-development1122.myshopify.com')->call([
             'METHOD' => 'POST',
             'URL' => '/admin/draft_orders.json',
             'DATA' =>
