@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bcbd92cc-f866-48e1-b6bf-e3f184591c5a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/OrderController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/OrderController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/style.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/single_order.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/single_order.blade.php" afterDir="false" />
-    </list>
+    <list default="true" id="bcbd92cc-f866-48e1-b6bf-e3f184591c5a" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,20 +64,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/pages/single_order.blade.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="120">
               <caret line="24" column="39" selection-start-line="24" selection-start-column="39" selection-end-line="24" selection-end-column="39" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/public/css/style.min.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="121">
-              <caret line="25" column="136711" selection-start-line="25" selection-start-column="136711" selection-end-line="25" selection-end-column="136711" />
             </state>
           </provider>
         </entry>
@@ -96,6 +83,7 @@
       <find>address1</find>
       <find>billing_phone</find>
       <find>width</find>
+      <find>.page-wrapper&gt;.container-fluid</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -319,12 +307,12 @@
       <workItem from="1571393332595" duration="15789000" />
       <workItem from="1571642578066" duration="2802000" />
       <workItem from="1571727471658" duration="22992000" />
-      <workItem from="1571814763522" duration="11348000" />
+      <workItem from="1571814763522" duration="11600000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="110860000" />
+    <option name="totallyTimeSpent" value="111112000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -585,17 +573,17 @@
         <state relative-caret-position="-208907" />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/style.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="25" column="136711" selection-start-line="25" selection-start-column="136711" selection-end-line="25" selection-end-column="136711" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/pages/single_order.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="24" column="39" selection-start-line="24" selection-start-column="39" selection-end-line="24" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/style.min.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="121">
-          <caret line="25" column="136711" selection-start-line="25" selection-start-column="136711" selection-end-line="25" selection-end-column="136711" />
         </state>
       </provider>
     </entry>

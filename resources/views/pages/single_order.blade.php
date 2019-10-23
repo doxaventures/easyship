@@ -7,6 +7,10 @@
         /* float: right; */
         text-align: right;
     }
+    .page-wrapper >.container-fluid {
+        padding: 20px 0px !important;
+        min-height: calc(100vh - 180px);
+    }
 </style>
 @extends('inc.template')
 @section('extend_template_details')
