@@ -157,7 +157,6 @@ public function create_order($order,$all){
     $selected_courier_total_charges=$order->shipment->selected_courier->total_charge;
     $check_order_id=Order::where('order_id',$order__id)->first();
     if(!$check_order_id){
-        dd($order);
         $orders=new Order();
         $orders->order_created_at=$order_created_at;
         $orders->easy_shipment_id=$easyship_shipment_id;
