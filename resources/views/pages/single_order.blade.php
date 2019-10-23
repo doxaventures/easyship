@@ -8,7 +8,7 @@
         text-align: right;
     }
     .page-wrapper >.container-fluid {
-        padding: 20px 0px !important;
+        padding: 20px 10px !important;
         min-height: calc(100vh - 180px);
     }
 </style>
@@ -82,7 +82,7 @@
                             @foreach($order_single as $order_details)
                                 <tr>
                                     <td class="txt-oflo">{{$order_details->destination_name}}</td>
-                                    <td><span class="label label-info label-rounded">{{$order_details->destination_state}}</span> </td>
+                                    <td><span>{{$order_details->destination_state}}</span> </td>
                                     <td class="txt-oflo">{{$order_details->destination_city}}</td>
                                     <td><span class="font-medium">{{$order_details->destination_postalcode}}</span></td>
                                     <td><span class="font-medium">{{$order_details->destination_company}}</span></td>
@@ -124,7 +124,7 @@
                                     <td class="txt-oflo">{{$order_details->courier_name}}</td>
                                     <td><span class="font-medium">{{$order_details->delivery_time}}</span></td>
                                     <td><span class="font-medium">$ {{$order_details->total_charges}}</span></td>
-                                    <td><span class="font-medium">{{$order_details->shipment_state}}</span></td>
+                                    <td><span class="label label-info label-rounded">{{$order_details->shipment_state}}</span></td>
                                 </tr>
                             @endforeach
                             </tbody>
