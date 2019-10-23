@@ -199,10 +199,10 @@ public function create_order($order,$all){
         $orders->billing_country_code=$billing_country_code;
         $orders->billing_province_code=$billing_province_code;
         $orders->save();
-        return redirect('/all_orders');
+        return redirect('/');
     }
     else{
-        return redirect('/all_orders');
+        return redirect('/');
     }
 
     //return $this->create_labels($orders);
