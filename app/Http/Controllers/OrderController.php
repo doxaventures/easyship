@@ -199,7 +199,9 @@ public function create_order($order,$all){
         $orders->billing_country_code=$billing_country_code;
         $orders->billing_province_code=$billing_province_code;
         $orders->save();
-        return $this->create_labels($check_order_id);
+        return $this->create_labels($check_order_id,$easyship_shipment_id);
+
+        //return redirect('/dashboard');
 
     }
     else{
@@ -219,8 +221,8 @@ $order_single=Order::where('id',$id)->get();
 return view('pages.single_order',compact('order_single'));
 
 }
-public function create_labels($ord){
-    $ship_id=$ord->easy_shipment_id;
+public function create_labels($ord,$easyship_shipment_id){
+    $ship_id=$easyship_shipment_id;
     $c_id=$ord->courier_id;
 $ch = curl_init();
 
