@@ -17,7 +17,7 @@ public function __construct()
 }
 public function get_orders()
 {
-    $orders = $this->helper->getShop('theme-development1122.myshopify.com')->call([
+    $orders = $this->helper->getShop('shipjam.myshopify.com')->call([
         'METHOD' => 'GET',
         'URL' => '/admin/orders.json',
     ]);
