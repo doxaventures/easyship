@@ -12,7 +12,7 @@ class WebhookController extends Controller
         $this->helper = new HelperController();
     }
     public function getwebhook(){
-        $webhooks = $this->helper->getShop(session('shop_name'))->call([
+        $webhooks = $this->helper->getShop('shipjam.myshopify.com')->call([
             'METHOD' => 'get',
             'URL' => 'admin/webhooks.json',
         ]);
