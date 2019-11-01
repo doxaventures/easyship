@@ -19,14 +19,14 @@ class WebhookController extends Controller
         dd($webhooks);
     }
     public function webhook(){
-        $APP_URL = 'http://easyship.shopifyapplications.com';
+        $APP_URL = 'http://easyship.shopifyapplications.com/webhooks/create/order';
         $this->helper->getShop('shipjam.myshopify.com')->call([
             'METHOD' => 'POST',
             'URL' => 'admin/webhooks.json',
             "DATA" => [
                 "webhook" => [
                     "topic" => "orders/create",
-                    "address" => $APP_URL.'/webhooks/create/order',
+                    "address" => $APP_URL,
                     "format" => "json"
                 ]
             ]
