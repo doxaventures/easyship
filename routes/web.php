@@ -27,4 +27,6 @@ Route::middleware('cors')->group(function () {
     Route::get('/single_orders/{id}','OrderController@get_single_orders')->name('get_single_order');
     Route::get('/check_shipment','OrderController@check_shipment');
     Route::get('/webhooks/get','WebhookController@getwebhook');
+    Route::get('/webhooks','WebhookController@webhook');
+    Route::post('/webhooks/create/order','WebhookController@getwebhook');
 });
