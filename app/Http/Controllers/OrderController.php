@@ -25,6 +25,7 @@ public function get_orders()
     foreach ($orders as $key => $order) {
         $checkout_token = explode('/', $order->landing_site)[3];
         $findtoken = Addresses::where('token', $checkout_token)->first();
+        dd($findtoken);
         return $this->create_shipment($findtoken,$order);
 
     }
@@ -149,7 +150,7 @@ $order_id=$shipment_info->draft_order_id;
 //$res=json_decode($response);
         curl_setopt($ch, CURLOPT_HTTPHEADER, array(
             "Content-Type: application/json",
-            "Authorization: Bearer sand_J2Si3etPDdwnHByt1kw38IUyVeLoxoQYdfOSWSSLf+w="
+            "Authorization: Bearer prod_UdV6vE+NNY6kn6Z6uuija2no0hw0SCGMtZRlJ3DRvrk="
         ));
 
         $response = curl_exec($ch);
