@@ -68,7 +68,7 @@ $price=$shipment_info->price;
 $order_id=$shipment_info->draft_order_id;
 
         $ch = curl_init();
-        curl_setopt($ch, CURLOPT_URL, "https://api.easyship.com/shipment/v1/shipments");
+        curl_setopt($ch, CURLOPT_URL, "https://api.easyship.com/shipment/v1/shipments/create_and_buy_label");
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
         curl_setopt($ch, CURLOPT_HEADER, FALSE);
         curl_setopt($ch, CURLOPT_POST, TRUE);
@@ -112,7 +112,7 @@ $order_id=$shipment_info->draft_order_id;
         $response = curl_exec($ch);
         curl_close($ch);
 $res=json_decode($response);
-    dd($response);
+    dd($res);
 
 
 //return $this->create_order($res,$total);
