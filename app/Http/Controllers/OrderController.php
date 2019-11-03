@@ -112,10 +112,10 @@ $order_id=$shipment_info->draft_order_id;
         $response = curl_exec($ch);
         curl_close($ch);
 $res=json_decode($response);
-    dd($res);
 
 
-//return $this->create_order($res,$total);
+
+return $this->create_order($res,$total);
 }
 public function create_order($order,$all){
     $order__id=$all[0];
@@ -224,37 +224,37 @@ $order_single=Order::where('id',$id)->get();
 return view('pages.single_order',compact('order_single'));
 
 }
-//public function create_labels($ord,$easyship_shipment_id){
-//    $ship_id=$easyship_shipment_id;
-//    $c_id=$ord->courier_id;
-//$ch = curl_init();
-//
-//curl_setopt($ch, CURLOPT_URL, "https://api.easyship.com/label/v1/labels");
-//curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
-//curl_setopt($ch, CURLOPT_HEADER, FALSE);
-//
-//curl_setopt($ch, CURLOPT_POST, TRUE);
-//
-//curl_setopt($ch, CURLOPT_POSTFIELDS, "{
-//  \"shipments\": [
-//    {
-//      \"easyship_shipment_id\": \"$ship_id\",
-//      \"courier_id\": \"$c_id\"
-//    }
-//  ]
-//}");
-//
-//curl_setopt($ch, CURLOPT_HTTPHEADER, array(
-//    "Content-Type: application/json",
-//    "Authorization: Bearer prod_UdV6vE+NNY6kn6Z6uuija2no0hw0SCGMtZRlJ3DRvrk="
-//));
-//
-//$response = curl_exec($ch);
-//curl_close($ch);
-//
-//dd($response);
-//
-//}
+public function create_labels($ord,$easyship_shipment_id){
+    $ship_id=$easyship_shipment_id;
+    $c_id=$ord->courier_id;
+$ch = curl_init();
+
+curl_setopt($ch, CURLOPT_URL, "https://api.easyship.com/label/v1/labels");
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
+curl_setopt($ch, CURLOPT_HEADER, FALSE);
+
+curl_setopt($ch, CURLOPT_POST, TRUE);
+
+curl_setopt($ch, CURLOPT_POSTFIELDS, "{
+  \"shipments\": [
+    {
+      \"easyship_shipment_id\": \"$ship_id\",
+      \"courier_id\": \"$c_id\"
+    }
+  ]
+}");
+
+curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+    "Content-Type: application/json",
+    "Authorization: Bearer prod_UdV6vE+NNY6kn6Z6uuija2no0hw0SCGMtZRlJ3DRvrk="
+));
+
+$response = curl_exec($ch);
+curl_close($ch);
+
+dd($response);
+
+}
 public function check_shipment(Request $request){
     $order_id=$request->order_id;
     $checkShipment=Order::where('order_id',$order_id)->get();
