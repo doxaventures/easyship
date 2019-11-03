@@ -107,11 +107,12 @@ $order_id=$shipment_info->draft_order_id;
 
         curl_setopt($ch, CURLOPT_HTTPHEADER, array(
             "Content-Type: application/json",
-            "Authorization: Bearer sand_J2Si3etPDdwnHByt1kw38IUyVeLoxoQYdfOSWSSLf+w="
+            "Authorization: Bearer prod_UdV6vE+NNY6kn6Z6uuija2no0hw0SCGMtZRlJ3DRvrk="
         ));
         $response = curl_exec($ch);
         curl_close($ch);
 $res=json_decode($response);
+dd($response);
 
 
 return $this->create_order($res,$total);
