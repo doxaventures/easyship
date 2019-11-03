@@ -25,7 +25,6 @@ public function get_orders()
     foreach ($orders as $key => $order) {
         $checkout_token = explode('/', $order->landing_site)[3];
         $findtoken = Addresses::where('token', $checkout_token)->first();
-        dd($findtoken);
         return $this->create_shipment($findtoken,$order);
 
     }
@@ -68,95 +67,52 @@ $weight=$shipment_info->weight;
 $price=$shipment_info->price;
 $order_id=$shipment_info->draft_order_id;
 
-//        $ch = curl_init();
-//        curl_setopt($ch, CURLOPT_URL, "https://api.easyship.com/shipment/v1/shipments");
-//        curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
-//        curl_setopt($ch, CURLOPT_HEADER, FALSE);
-//        curl_setopt($ch, CURLOPT_POST, TRUE);
-//        curl_setopt($ch, CURLOPT_POSTFIELDS, "{
-//\"platform_name\": \"Shopify\",
-//\"platform_order_number\": \"$order_id\",
-//\"selected_courier_id\": \"$c_id\",
-//\"destination_country_alpha2\": \"$d_country\",
-//\"destination_city\": \"$d_city\",
-//\"destination_postal_code\": \"$d_postalcode\",
-//\"destination_state\": \"$state\",
-//\"destination_name\": \"$name\",
-//\"destination_address_line_1\": \"$address1\",
-//\"destination_address_line_2\": \"$address2\",
-//\"destination_phone_number\": \"$phone\",
-//\"destination_email_address\": \"$email\",
-//\"items\": [
-//{
-//  \"description\": \"Silk dress\",
-//  \"sku\": \"test\",
-//   \"actual_weight\": $weight,
-//  \"height\": $height,
-//  \"width\": $width,
-//  \"length\": $length,
-//  \"category\": \"fashion\",
-//  \"declared_currency\": \"SGD\",
-//  \"declared_customs_value\": $price
-//}
-//]
-//}");
-
         $ch = curl_init();
-
-        curl_setopt($ch, CURLOPT_URL, "https://api.easyship.com/shipment/v1/shipments/create_and_buy_label");
+        curl_setopt($ch, CURLOPT_URL, "https://api.easyship.com/shipment/v1/shipments");
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
         curl_setopt($ch, CURLOPT_HEADER, FALSE);
-
         curl_setopt($ch, CURLOPT_POST, TRUE);
-
         curl_setopt($ch, CURLOPT_POSTFIELDS, "{
-  \"platform_name\": \"Shopify\",
-  \"platform_order_number\": \"$order_id\",
-  \"selected_courier_id\": \"$c_id\",
-  \"destination_country_alpha2\": \"$d_country\",
-  \"destination_city\": \"$d_city\",
-  \"destination_postal_code\": \"$d_postalcode\",
-  \"destination_state\": \"$state\",
-  \"destination_name\": \"$name\",
-  \"destination_address_line_1\": \"$address1\",
-  \"destination_address_line_2\": $address2,
-  \"destination_phone_number\": \"$phone\",
-  \"destination_email_address\": \"$email\",
-  \"items\": [
-    {
-      \"description\": \"Silk dress\",
-      \"sku\": \"test\",
-      \"actual_weight\": $weight,
-      \"height\": $height,
-      \"width\": $width,
-      \"length\": $length,
-      \"category\": \"fashion\",
-      \"declared_currency\": \"SGD\",
-      \"declared_customs_value\": $price
-    }
-  ]
+\"platform_name\": \"Shopify\",
+\"platform_order_number\": \"$order_id\",
+\"selected_courier_id\": \"$c_id\",
+\"destination_country_alpha2\": \"$d_country\",
+\"destination_city\": \"$d_city\",
+\"destination_postal_code\": \"$d_postalcode\",
+\"destination_state\": \"$state\",
+\"destination_name\": \"$name\",
+\"destination_address_line_1\": \"$address1\",
+\"destination_address_line_2\": \"$address2\",
+\"destination_phone_number\": \"$phone\",
+\"destination_email_address\": \"$email\",
+\"items\": [
+{
+  \"description\": \"Silk dress\",
+  \"sku\": \"test\",
+   \"actual_weight\": $weight,
+  \"height\": $height,
+  \"width\": $width,
+  \"length\": $length,
+  \"category\": \"fashion\",
+  \"declared_currency\": \"SGD\",
+  \"declared_customs_value\": $price
+}
+]
 }");
+
         $total=[$orders_id,$customer_name,$checkout_id,$customer_id,$order_status,$customer_total_orders,$billing_email,$order_no,$billing_phone,
             $gateway,$billing_name,$billing_address1,$billing_address2,$billing_city,$zip,$billing_province,$billing_country,
             $billing_company,$billing_country_code,$billing_province_code
         ];
 
-//        curl_setopt($ch, CURLOPT_HTTPHEADER, array(
-//            "Content-Type: application/json",
-//            "Authorization: Bearer sand_J2Si3etPDdwnHByt1kw38IUyVeLoxoQYdfOSWSSLf+w="
-//        ));
-//        $response = curl_exec($ch);
-//        curl_close($ch);
-//$res=json_decode($response);
         curl_setopt($ch, CURLOPT_HTTPHEADER, array(
             "Content-Type: application/json",
-            "Authorization: Bearer prod_UdV6vE+NNY6kn6Z6uuija2no0hw0SCGMtZRlJ3DRvrk="
+            "Authorization: Bearer sand_J2Si3etPDdwnHByt1kw38IUyVeLoxoQYdfOSWSSLf+w="
         ));
-
         $response = curl_exec($ch);
         curl_close($ch);
-dd($response);
-        $res=json_decode($response);
+$res=json_decode($response);
+
 
 return $this->create_order($res,$total);
 }
