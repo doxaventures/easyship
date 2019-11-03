@@ -112,7 +112,7 @@ $order_id=$shipment_info->draft_order_id;
         $response = curl_exec($ch);
         curl_close($ch);
 $res=json_decode($response);
-dd($response);
+    dd($response);
 
 
 //return $this->create_order($res,$total);
