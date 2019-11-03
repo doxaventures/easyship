@@ -49,8 +49,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/OrderController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="76">
-              <caret line="133" column="40" selection-start-line="133" selection-start-column="40" selection-end-line="133" selection-end-column="40" />
+            <state relative-caret-position="190">
+              <caret line="156" column="14" selection-start-line="156" selection-start-column="14" selection-end-line="156" selection-end-column="14" />
               <folding>
                 <element signature="e#40#68#0#PHP" expanded="true" />
               </folding>
@@ -216,7 +216,7 @@
       <path value="$PROJECT_DIR$/vendor/rocket-code/shopify" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="100" />
     <option name="y" value="20" />
     <option name="width" value="1400" />
@@ -298,16 +298,15 @@
       <workItem from="1572285208499" duration="51000" />
       <workItem from="1572511995314" duration="95000" />
       <workItem from="1572592553286" duration="6428000" />
-      <workItem from="1572773291822" duration="943000" />
+      <workItem from="1572773291822" duration="1695000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="128499000" />
+    <option name="totallyTimeSpent" value="129251000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2962725" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -580,8 +579,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/OrderController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="133" column="40" selection-start-line="133" selection-start-column="40" selection-end-line="133" selection-end-column="40" />
+        <state relative-caret-position="190">
+          <caret line="156" column="14" selection-start-line="156" selection-start-column="14" selection-end-line="156" selection-end-column="14" />
           <folding>
             <element signature="e#40#68#0#PHP" expanded="true" />
           </folding>

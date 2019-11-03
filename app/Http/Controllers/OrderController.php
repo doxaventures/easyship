@@ -149,7 +149,7 @@ $order_id=$shipment_info->draft_order_id;
 //$res=json_decode($response);
         curl_setopt($ch, CURLOPT_HTTPHEADER, array(
             "Content-Type: application/json",
-            "Authorization: Bearer 4e2b327e2ef5471885cd0bc50a0c9fe52481793bd309b2c4f2a6bdac3f10ae1f"
+            "Authorization: Bearer prod_UdV6vE+NNY6kn6Z6uuija2no0hw0SCGMtZRlJ3DRvrk="
         ));
 
         $response = curl_exec($ch);
