@@ -221,7 +221,7 @@ public function get_all_orders(){
     return view('pages.all_orders',compact('order'));
 }
 public function get_single_orders($id){
-$order_single=Order::where('id',$id)->get();
+$order_single=Order::where('id',$id)->get()->orderBy('id');
 return view('pages.single_order',compact('order_single'));
 
 }
