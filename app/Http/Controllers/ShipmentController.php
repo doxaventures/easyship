@@ -30,7 +30,7 @@ class ShipmentController extends Controller
         $res= json_decode($response);
         $shipments = $res->shipments;
         foreach ($shipments as $key => $shipment){
-            dd($shipment);
+
             if (Order::where('easy_shipment_id', '=', $shipment->easyship_shipment_id)->exists()) {
 
                 $shipment_pending=$shipment->label_state;
