@@ -44,11 +44,28 @@ class ShipmentController extends Controller
 //                $order=Order::
 
                 }
-
-
             }
         }
         $ship = Order::all();
         return view('pages.shipments')->with('ship',$ship);
+}
+public function delete_shipment($id){
+    $ch = curl_init();
+
+    curl_setopt($ch, CURLOPT_URL, "https://api.easyship.com/shipment/v1/shipments/{$id}");
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
+    curl_setopt($ch, CURLOPT_HEADER, FALSE);
+
+    curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "DELETE");
+
+    curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+        "Content-Type: application/json",
+        "Authorization: Bearer prod_UdV6vE+NNY6kn6Z6uuija2no0hw0SCGMtZRlJ3DRvrk="
+    ));
+
+    $response = curl_exec($ch);
+    curl_close($ch);
+
+    var_dump($response);
 }
 }

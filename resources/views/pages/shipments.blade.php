@@ -38,8 +38,28 @@
                                     <td class="txt-oflo">{{$order_details->store_name}}</td>
                                     <td><span class="font-medium">$ {{$order_details->total_charges}}</span></td>
 
-                                    <td><span><a href=""> <i class="fa fa-trash" aria-hidden="true"></i></a></span></td>
+                                    <td><span><a href="#"> <i class="fa fa-trash" aria-hidden="true"></i></a></span></td>
                                 </tr>
+
+                                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">Cancel Shipment</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <h6>Are you sure? Shipment willbe cancelled</h6>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                <a href="{{route('delete_shipment',$order_details->easy_shipment_id)}}" class="btn btn-danger">Delete</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             @endforeach
                             </tbody>
                         </table>
@@ -48,4 +68,5 @@
             </div>
         </div>
     </div>
+
 @endsection

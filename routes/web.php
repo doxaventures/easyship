@@ -30,4 +30,5 @@ Route::middleware('cors')->group(function () {
     Route::get('/webhooks','WebhookController@webhook');
     Route::get('/webhooks/create/order','WebhookController@webhook_order_create');
     Route::get('/get_shipments','ShipmentController@get_shipment');
+    Route::get('/delete_shipment','ShipmentController@delete_shipment')->name('delete_shipment');
 });
