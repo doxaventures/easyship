@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Order;
 use Illuminate\Http\Request;
 
 class ShipmentController extends Controller
@@ -31,10 +32,14 @@ class ShipmentController extends Controller
         foreach ($shipments as $key => $shipment){
             $shipment_pending=$shipment->label_state;
             if($shipment_pending == 'pending'){
-                var_dump($shipment_pending);
+                Order::where('shipment_status',$shipment_pending)->first()->update([
+                    'shipment_status' => 'updated'
+                ]);
+
             }
             else{
-                var_dump('123');
+//                $order=Order::
+
             }
         }
 }
