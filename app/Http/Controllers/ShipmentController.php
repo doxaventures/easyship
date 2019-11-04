@@ -29,9 +29,8 @@ class ShipmentController extends Controller
         curl_close($ch);
         $res= json_decode($response);
         $shipments = $res->shipments;
-        dd($shipments);
         foreach ($shipments as $key => $shipment){
-            if (Order::where('easy_shipment_id', '=', ESUS10018284)->exists()) {
+            if (Order::where('easy_shipment_id', '=', $shipment->easyship_shipment_id)->exists()) {
 
                 $shipment_pending=$shipment->label_state;
                 if($shipment_pending == 'pending'){
