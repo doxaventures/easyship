@@ -29,7 +29,13 @@ class ShipmentController extends Controller
         $res= json_decode($response);
         $shipments = $res->shipments;
         foreach ($shipments as $key => $shipment){
-            var_dump($shipment->label_state);
+            $shipment_pending=$shipment->label_state;
+            if($shipment_pending = 'pending'){
+                var_dump($shipment_pending);
+            }
+            else{
+                var_dump('123');
+            }
         }
 }
 }
