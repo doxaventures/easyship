@@ -10463,3 +10463,8 @@ File: scss
 @media (max-width: 991.98px) {
   .do-block {
     display: block !important; } }
+@media (min-width: 768px) {
+  #main-wrapper[data-layout=vertical][data-sidebar-position=fixed][data-sidebartype=mini-sidebar] .topbar .top-navbar .navbar-collapse, #main-wrapper[data-layout=vertical][data-sidebartype=mini-sidebar] .page-wrapper {
+    margin-left: 0px !important;
+  }
+}
