@@ -217,7 +217,7 @@ public function create_order($order,$all){
 
 }
 public function get_all_orders(){
-    $order=Order::all()->orderBy('id');
+    $order=Order::orderBy('id', 'DESC')->get();
     return view('pages.all_orders',compact('order'));
 }
 public function get_single_orders($id){
