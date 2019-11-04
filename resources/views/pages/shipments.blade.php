@@ -38,7 +38,7 @@
                                     <td class="txt-oflo">{{$order_details->store_name}}</td>
                                     <td><span class="font-medium">$ {{$order_details->total_charges}}</span></td>
 
-                                    <td><span style="padding-right: 10px;"><a href="#"><i class="fa fa-eye"></i></a></span><span><a href=""> <i class="fa fa-trash" aria-hidden="true"></i></a></span></td>
+                                    <td><span><a href=""> <i class="fa fa-trash" aria-hidden="true"></i></a></span></td>
                                 </tr>
                             @endforeach
                             </tbody>
