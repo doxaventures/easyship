@@ -11,7 +11,9 @@
         .page-wrapper >.container-fluid {
             padding: 20px 0px !important;
             min-height: calc(100vh - 180px);
+            margin-left:0px !important;
         }
+
     </style>
     <link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/favicon.png">
     <title>Easy Ship</title>
