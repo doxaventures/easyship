@@ -38,7 +38,7 @@
                                     <td class="txt-oflo">{{$order_details->store_name}}</td>
                                     <td><span class="font-medium">$ {{$order_details->total_charges}}</span></td>
 
-                                    <td><span><a href="#"> <i class="fa fa-trash" aria-hidden="true"></i></a></span></td>
+                                    <td><span><a href="#" data-toggle="modal" data-target="#exampleModal"> <i class="fa fa-trash" aria-hidden="true"></i></a></span></td>
                                 </tr>
 
                                 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
