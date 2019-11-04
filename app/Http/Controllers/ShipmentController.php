@@ -27,6 +27,9 @@ class ShipmentController extends Controller
         $response = curl_exec($ch);
         curl_close($ch);
         $res= json_decode($response);
-        dd($res->shipments);
+        $shipments = $res->shipments;
+        foreach ($shipments as $key => $shipment){
+            dd($shipment);
+        }
 }
 }
