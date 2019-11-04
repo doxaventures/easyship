@@ -208,8 +208,8 @@ public function create_order($order,$all){
 
     }
     else{
-        return $this->create_labels($check_order_id,$easyship_shipment_id);
-//        return redirect('/dashboard');
+        //return $this->create_labels($check_order_id,$easyship_shipment_id);
+    return redirect('/dashboard');
     }
 
     //return $this->create_labels($orders);
