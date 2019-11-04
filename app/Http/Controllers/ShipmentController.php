@@ -27,6 +27,6 @@ class ShipmentController extends Controller
         $response = curl_exec($ch);
         curl_close($ch);
         $res= json_decode($response);
-        dd($res);
+        dd($res->shipments);
 }
 }
