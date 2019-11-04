@@ -33,7 +33,7 @@ class ShipmentController extends Controller
             $shipment_pending=$shipment->label_state;
             if($shipment_pending == 'pending'){
                 Order::where('shipment_status',$shipment_pending)->first()->update([
-                    'shipment_status' => 'updated'
+                    'shipment_status' => 'pending'
                 ]);
 
             }
