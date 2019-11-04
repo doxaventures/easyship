@@ -35,7 +35,7 @@
 
                                     <td class="txt-oflo">{{$order_details->easy_shipment_id}}</td>
                                     <td><span class="label label-info label-rounded">{{$order_details->shipment_status}}</span> </td>
-                                    <td class="txt-oflo">{{ Carbon\Carbon::parse($order_details->store_name}}</td>
+                                    <td class="txt-oflo">{{$order_details->store_name}}</td>
                                     <td><span class="font-medium">$ {{$order_details->total_charges}}</span></td>
 
                                     <td><span style="padding-right: 10px;"><a href="#"><i class="fa fa-eye"></i></a></span><span><a href=""> <i class="fa fa-trash" aria-hidden="true"></i></a></span></td>
