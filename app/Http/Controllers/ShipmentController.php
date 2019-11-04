@@ -29,7 +29,7 @@ class ShipmentController extends Controller
         $res= json_decode($response);
         $shipments = $res->shipments;
         foreach ($shipments as $key => $shipment){
-            dd($shipment);
+            var_dump($shipment->label_state);
         }
 }
 }
