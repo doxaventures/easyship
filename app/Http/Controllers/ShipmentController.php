@@ -30,7 +30,7 @@ class ShipmentController extends Controller
         $shipments = $res->shipments;
         foreach ($shipments as $key => $shipment){
             $shipment_pending=$shipment->label_state;
-            if($shipment_pending = 'pending'){
+            if($shipment_pending == 'pending'){
                 var_dump($shipment_pending);
             }
             else{
