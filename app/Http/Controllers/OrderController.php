@@ -201,6 +201,7 @@ public function create_order($order,$all){
         $orders->billing_company=$billing_company;
         $orders->billing_country_code=$billing_country_code;
         $orders->billing_province_code=$billing_province_code;
+        $orders->shipment_status='pending';
         $orders->save();
 
 
