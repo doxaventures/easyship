@@ -36,10 +36,11 @@
                             <thead>
                             <tr>
                                 <th class="border-top-0">ID</th>
-                                <th class="border-top-0">STATUS</th>
+                                <th class="border-top-0">Shipment STATUS</th>
                                 <th class="border-top-0">Placed Date</th>
                                 <th class="border-top-0">Total Price</th>
-                                <th class="border-top-0">Delivery Method</th>
+                                <th class="border-top-0">Delivery Time</th>
+                                <th class="border-top-0">Courier Selected</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -50,7 +51,8 @@
                                     <td><span class="label label-info label-rounded">{{$order_details->order_status}}</span> </td>
                                     <td class="txt-oflo">{{ Carbon\Carbon::parse($order_details->order_created_at)->format('l jS \\ F Y h:i:s A')}}</td>
                                     <td><span class="font-medium">$ {{$order_details->total_charges}}</span></td>
-                                    <td><span class="font-medium">{{$order_details->gateway}}</span></td>
+                                    <td><span class="font-medium">{{$order_details->delivery_time}}</span></td>
+                                    <td class="txt-oflo">{{$order_details->courier_name}}</td>
                                 </tr>
                             @endforeach
                             </tbody>
@@ -99,39 +101,39 @@
             </div>
 
 
-            <div class="col-12">
-                <div class="card">
-                    <div class="card-body">
-                        <h4 class="card-title"> Courier Details</h4>
-                    </div>
-                    <div class="table-responsive">
-                        <table class="table table-hover">
-                            <thead>
-                            <tr>
-                                <th class="border-top-0"> ID</th>
-                                <th class="border-top-0"> Name</th>
-                                <th class="border-top-0"> Time</th>
-                                <th class="border-top-0"> Total Charges</th>
-                                <th class="border-top-0"> Status</th>
+            {{--<div class="col-12">--}}
+                {{--<div class="card">--}}
+                    {{--<div class="card-body">--}}
+                        {{--<h4 class="card-title"> Courier Details</h4>--}}
+                    {{--</div>--}}
+                    {{--<div class="table-responsive">--}}
+                        {{--<table class="table table-hover">--}}
+                            {{--<thead>--}}
+                            {{--<tr>--}}
+                                {{--<th class="border-top-0"> ID</th>--}}
+                                {{--<th class="border-top-0"> Name</th>--}}
+                                {{--<th class="border-top-0"> Time</th>--}}
+                                {{--<th class="border-top-0"> Total Charges</th>--}}
+                                {{--<th class="border-top-0"> Status</th>--}}
 
-                            </tr>
-                            </thead>
-                            <tbody>
-                            @foreach($order_single as $order_details)
-                                <tr>
+                            {{--</tr>--}}
+                            {{--</thead>--}}
+                            {{--<tbody>--}}
+                            {{--@foreach($order_single as $order_details)--}}
+                                {{--<tr>--}}
 
-                                    <td class="txt-oflo">{{$order_details->courier_id}}</td>
-                                    <td class="txt-oflo">{{$order_details->courier_name}}</td>
-                                    <td><span class="font-medium">{{$order_details->delivery_time}}</span></td>
-                                    <td><span class="font-medium">$ {{$order_details->total_charges}}</span></td>
-                                    <td><span class="label label-info label-rounded">{{$order_details->shipment_state}}</span></td>
-                                </tr>
-                            @endforeach
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
+                                    {{--<td class="txt-oflo">{{$order_details->courier_id}}</td>--}}
+                                    {{--<td class="txt-oflo">{{$order_details->courier_name}}</td>--}}
+                                    {{--<td><span class="font-medium">{{$order_details->delivery_time}}</span></td>--}}
+                                    {{--<td><span class="font-medium">$ {{$order_details->total_charges}}</span></td>--}}
+                                    {{--<td><span class="label label-info label-rounded">{{$order_details->shipment_state}}</span></td>--}}
+                                {{--</tr>--}}
+                            {{--@endforeach--}}
+                            {{--</tbody>--}}
+                        {{--</table>--}}
+                    {{--</div>--}}
+                {{--</div>--}}
+            {{--</div>--}}
             <div class="col-12">
                 <div class="card">
                     <div class="card-body">
