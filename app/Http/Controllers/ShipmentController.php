@@ -68,8 +68,8 @@ public function delete_shipment($id){
     $res=explode(':',$response);
 
     $res1=json_encode($res);
-    $res2=explode('"');
-    dd($res1);
+    $res2=explode('"',$res1);
+    dd($res2);
     flash($res1);
     return back();
 }
