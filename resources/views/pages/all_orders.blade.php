@@ -17,8 +17,9 @@
                     <div class="card-body">
                         <h4 class="card-title">Orders Details</h4>
                         @if(flash()->message)
-                            <div class="text-center" style="text-align: center;">
-                                {{ flash()->message }}
+                            <div class="text-center error_mesages" style="text-align: center;">
+                                <?php $messages=explode(flash()->message,':')?>
+                                {{ $messages[1] }}
                             </div>
                         @endif
                     </div>
