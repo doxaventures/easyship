@@ -65,8 +65,8 @@ public function delete_shipment($id){
 
     $response = curl_exec($ch);
     curl_close($ch);
-    $res=json_decode($response->error);
-    dd($res);
+    $res=json_decode($response);
+    dd(explode($res,':'));
     flash($response);
     return back();
 }
