@@ -12,7 +12,7 @@
 @section('extend_template_details')
     <div class="container-fluid">
         @if(flash()->message)
-            <div>
+            <div class="text-center" style="text-align: center;">
                 {{ flash()->message }}
             </div>
         @endif
