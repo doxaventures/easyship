@@ -66,8 +66,10 @@ public function delete_shipment($id){
     $response = curl_exec($ch);
     curl_close($ch);
     $res=explode(':',$response);
-    $res1=json_encode(explode('}',$res));
-    flash($res1[0]);
+
+    $res1=explode('}',$res);
+    dd($res1);
+    flash($res1);
     return back();
 }
 }
