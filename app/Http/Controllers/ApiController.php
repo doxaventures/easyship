@@ -60,6 +60,7 @@ curl_setopt($ch, CURLOPT_HTTPHEADER, array(
 $response = curl_exec($ch);
 curl_close($ch);
 $res=json_decode($response);
+dd($res);
         return response()->json(['data'=>$response]);
 
     }
