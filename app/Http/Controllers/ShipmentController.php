@@ -70,7 +70,9 @@ public function delete_shipment($id){
     $res1=json_encode($res);
     $res2=explode('"',$res1);
     $res3=$res2[6];
-    dd($res3);
+    $res4=json_encode($res3);
+
+    dd($res4);
     if($res3 == 'Couldnt find Shipment'){
         dd('yes');
     }
