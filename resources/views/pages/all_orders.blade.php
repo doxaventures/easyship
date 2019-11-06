@@ -11,16 +11,16 @@
 @extends('inc.template')
 @section('extend_template_details')
     <div class="container-fluid">
-        @if(flash()->message)
-            <div class="text-center" style="text-align: center;">
-                {{ flash()->message }}
-            </div>
-        @endif
         <div class="row">
             <div class="col-12">
                 <div class="card">
                     <div class="card-body">
                         <h4 class="card-title">Orders Details</h4>
+                        @if(flash()->message)
+                            <div class="text-center" style="text-align: center;">
+                                {{ flash()->message }}
+                            </div>
+                        @endif
                     </div>
                     <div class="table-responsive">
                         <table class="table table-hover">
