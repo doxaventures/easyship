@@ -25,6 +25,7 @@ class ComposerStaticInit90c1fea8118f3438abc96fb76766d07e
         '6124b4c8570aa390c21fafd04a26c69f' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
         '801c31d8ed748cfa537fa45402288c95' => __DIR__ . '/..' . '/psy/psysh/src/functions.php',
         '0d8253363903f0ac7b0978dcde4e28a0' => __DIR__ . '/..' . '/beyondcode/laravel-dump-server/helpers.php',
+        'd7d2249221e8f706679d508baca33c36' => __DIR__ . '/..' . '/spatie/laravel-flash/src/helpers.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -69,6 +70,7 @@ class ComposerStaticInit90c1fea8118f3438abc96fb76766d07e
             'Symfony\\Component\\Debug\\' => 24,
             'Symfony\\Component\\CssSelector\\' => 30,
             'Symfony\\Component\\Console\\' => 26,
+            'Spatie\\Flash\\' => 13,
         ),
         'R' => 
         array (
@@ -261,6 +263,10 @@ class ComposerStaticInit90c1fea8118f3438abc96fb76766d07e
         array (
             0 => __DIR__ . '/..' . '/symfony/console',
         ),
+        'Spatie\\Flash\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/spatie/laravel-flash/src',
+        ),
         'RocketCode\\' => 
         array (
             0 => __DIR__ . '/..' . '/rocket-code/shopify/src/RocketCode',
@@ -418,6 +424,7 @@ class ComposerStaticInit90c1fea8118f3438abc96fb76766d07e
 
     public static $classMap = array (
         'App\\Addresses' => __DIR__ . '/../..' . '/app/Addresses.php',
+        'App\\Console\\Commands\\EveryMinute' => __DIR__ . '/../..' . '/app/Console/Commands/EveryMinute.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
         'App\\Http\\Controllers\\ApiController' => __DIR__ . '/../..' . '/app/Http/Controllers/ApiController.php',
@@ -429,6 +436,7 @@ class ComposerStaticInit90c1fea8118f3438abc96fb76766d07e
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
         'App\\Http\\Controllers\\HelperController' => __DIR__ . '/../..' . '/app/Http/Controllers/HelperController.php',
         'App\\Http\\Controllers\\OrderController' => __DIR__ . '/../..' . '/app/Http/Controllers/OrderController.php',
+        'App\\Http\\Controllers\\ShipmentController' => __DIR__ . '/../..' . '/app/Http/Controllers/ShipmentController.php',
         'App\\Http\\Controllers\\ShopController' => __DIR__ . '/../..' . '/app/Http/Controllers/ShopController.php',
         'App\\Http\\Controllers\\WebhookController' => __DIR__ . '/../..' . '/app/Http/Controllers/WebhookController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
@@ -3361,6 +3369,8 @@ class ComposerStaticInit90c1fea8118f3438abc96fb76766d07e
         'SebastianBergmann\\Timer\\RuntimeException' => __DIR__ . '/..' . '/phpunit/php-timer/src/RuntimeException.php',
         'SebastianBergmann\\Timer\\Timer' => __DIR__ . '/..' . '/phpunit/php-timer/src/Timer.php',
         'SebastianBergmann\\Version' => __DIR__ . '/..' . '/sebastian/version/src/Version.php',
+        'Spatie\\Flash\\Flash' => __DIR__ . '/..' . '/spatie/laravel-flash/src/Flash.php',
+        'Spatie\\Flash\\Message' => __DIR__ . '/..' . '/spatie/laravel-flash/src/Message.php',
         'Symfony\\Component\\Console\\Application' => __DIR__ . '/..' . '/symfony/console/Application.php',
         'Symfony\\Component\\Console\\CommandLoader\\CommandLoaderInterface' => __DIR__ . '/..' . '/symfony/console/CommandLoader/CommandLoaderInterface.php',
         'Symfony\\Component\\Console\\CommandLoader\\ContainerCommandLoader' => __DIR__ . '/..' . '/symfony/console/CommandLoader/ContainerCommandLoader.php',

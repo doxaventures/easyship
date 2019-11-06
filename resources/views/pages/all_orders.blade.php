@@ -11,7 +11,11 @@
 @extends('inc.template')
 @section('extend_template_details')
     <div class="container-fluid">
-
+        @if(flash()->message)
+            <div>
+                {{ flash()->message }}
+            </div>
+        @endif
         <div class="row">
             <div class="col-12">
                 <div class="card">
