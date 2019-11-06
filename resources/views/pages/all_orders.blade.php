@@ -7,6 +7,13 @@
         /* float: right; */
         text-align: right;
     }
+    .text-center.messages {
+        font-size: 18px;
+        border: 1px solid green;
+        width: 30%;
+        margin: auto;
+        padding: 10px 10px;
+    }
 </style>
 @extends('inc.template')
 @section('extend_template_details')
@@ -18,7 +25,11 @@
                         <h4 class="card-title">Orders Details</h4>
                         @if(flash()->message)
                             <div class="text-center messages" style="text-align: center;">
-                                {{ flash()->message }}
+                                <ul class="">
+                                    <li>
+                                        {{ flash()->message }}</li>
+                                </ul>
+
                             </div>
                         @endif
                     </div>
