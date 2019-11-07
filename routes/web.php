@@ -21,14 +21,14 @@ Route::get('/index',function(){
 Route::middleware('cors')->group(function () {
     Route::get('/api','ApiController@index');
     Route::get('/api/draft_order','ApiController@create_draft_order');
-    Route::get('/orders','OrderController@get_orders');
+    Route::post('/orders','OrderController@get_orders');
     Route::get('/ship','OrderController@create_labels');
     Route::get('/','OrderController@get_all_orders')->name('get_all_orders');
     Route::get('/single_orders/{id}','OrderController@get_single_orders')->name('get_single_order');
     Route::get('/check_shipment','OrderController@check_shipment');
     Route::get('/webhooks/get','WebhookController@getwebhook');
     Route::get('/webhooks','WebhookController@webhook');
-    Route::get('/webhooks/create/order','WebhookController@webhook_order_create');
+    Route::post('/webhooks/create/order','WebhookController@webhook_order_create');
     Route::get('/get_shipments','ShipmentController@get_shipment');
     Route::get('/delete_shipment{id}','ShipmentController@delete_shipment')->name('delete_shipment');
 });
