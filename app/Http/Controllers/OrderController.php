@@ -205,12 +205,12 @@ public function create_order($order,$all){
         $orders->save();
 
 
-        return redirect('/dashboard');
+        return redirect('/');
 
     }
     else{
         //return $this->create_labels($check_order_id,$easyship_shipment_id);
-    return redirect('/dashboard');
+    return redirect('/');
     }
 
     //return $this->create_labels($orders);

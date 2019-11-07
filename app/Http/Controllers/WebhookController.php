@@ -35,8 +35,10 @@ class WebhookController extends Controller
     public function webhook_order_create(Request $request)
     {
         $orders = new OrderController();
-//        $order = json_encode($request);
-
-        $orders->get_orders();
+    $order = json_encode($request);
+    Order::create([
+       'order_created_at' => 111
+    ]);
+//        $orders->get_orders();
     }
 }
