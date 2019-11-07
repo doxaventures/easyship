@@ -71,12 +71,14 @@ public function delete_shipment($id){
     $res2=explode('"',$res1);
     $res3=$res2[6];
     if($res3 == "Couldn't find Shipment\\"){
-        dd('yes');
+    $delete_shipment=Order::find($id);
+    $delete_shipment->delete();
+        return back();
     }
     else{
-        dd('no');
+        return back();
     }
     flash($res3);
-    return back();
+
 }
 }
