@@ -18,24 +18,19 @@ public function __construct()
 }
 public function get_orders($id)
 {
-    $check_order=Order::where('order_id',$id)->first();
+    $check_order = Order::where('order_id',$id)->first();
     if($check_order){
-        return redirect('/');
-    }
-    else{
+    } else{
         $orders = $this->helper->getShop('shipjam.myshopify.com')->call([
             'METHOD' => 'GET',
-            'URL' => '/admin/orders.json',
+            'URL' => '/admin/orders/'.$id.'.json',
         ]);
-        $orders = $orders->orders;
-        foreach ($orders as $key => $order) {
-            $checkout_token = explode('/', $order->landing_site)[3];
-            $findtoken = Addresses::where('token', $checkout_token)->first();
-            return $this->create_shipment($findtoken,$order);
+        $order = $orders->order;
+        $checkout_token = explode('/', $order->landing_site)[3];
+        $findtoken = Addresses::where('token', $checkout_token)->first();
+        return $this->create_shipment($findtoken,$order);
 
         }
-    }
-
 }
     public function create_shipment($shipment_info,$all_order){
     $orders_id=$all_order->id;
