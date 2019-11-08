@@ -31,5 +31,5 @@ Route::middleware('cors')->group(function () {
 //    Route::get('/delete_shipment{id}','ShipmentController@delete_shipment')->name('delete_shipment');
 });
 Route::get('/webhooks/get','WebhookController@getwebhook');
-Route::POST('/webhooks','WebhookController@webhook');
+Route::get('/webhooks','WebhookController@webhook');
 Route::POST('/webhooks/create/order','WebhookController@webhook_order_create')->name('create_orders_webhook');
