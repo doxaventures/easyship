@@ -38,7 +38,7 @@
                             <thead>
                             <tr>
                                 <th class="border-top-0">Order ID</th>
-                                <th class="border-top-0">Order STATUS</th>
+                                <th class="border-top-0">Shipment STATUS</th>
                                 <th class="border-top-0">Order Placed Date</th>
                                 <th class="border-top-0">Order Total Price</th>
                                 <th class="border-top-0">Action</th>
@@ -49,7 +49,7 @@
                             <tr>
 
                                 <td class="txt-oflo">{{$order_details->order_id}}</td>
-                                <td><span class="label label-info label-rounded">{{$order_details->order_status}}</span> </td>
+                                <td><span class="label label-info label-rounded">{{$order_details->shipment_status}}</span> </td>
                                 <td class="txt-oflo">{{ Carbon\Carbon::parse($order_details->order_created_at)->format('l jS \\ F Y h:i:s A')}}</td>
                                 <td><span class="font-medium">$ {{$order_details->total_charges}}</span></td>
 
