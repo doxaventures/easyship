@@ -14,8 +14,11 @@ class ShipmentController extends Controller
         $this->helper = new HelperController();
     }
     public function get_shipment(){
-        $ch = curl_init();
+        Order::where('shipment_status','cleared')->first()->update([
+            'shipment_status' => 'cleared'
+        ]);
 
+        $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, "https://api.easyship.com/shipment/v1/shipments?easyship_shipment_id=&platform_order_number=&shipment_state=&pickup_state=&delivery_state=&label_state=&created_at_from=&created_at_to=&confirmed_at_from=&confirmed_at_to=&per_page=&page=");
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
         curl_setopt($ch, CURLOPT_HEADER, FALSE);
