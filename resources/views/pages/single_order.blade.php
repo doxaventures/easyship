@@ -169,7 +169,7 @@
                     </div>
                 </div>
                 <div class="back_button text-center">
-                    <a href="http://easyship.shopifyapplications.com/" class="btn btn-primary">Go to Home</a>
+                    <a href="http://easyship.shopifyapplications.com/" class="btn btn-primary">Back</a>
                 </div>
             </div>
         </div>
