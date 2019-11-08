@@ -36,12 +36,14 @@ class WebhookController extends Controller
     public function webhook_order_create(Request $request)
     {
         $json = file_get_contents('php://input');
-    $order = json_encode($json, true);
-    $ord=explode(',',$order);
+    $order = json_encode($json);
+    foreach($order as $key => $value){
+        $test=new test();
+        $test->data=$value;
+        $test->save();
+    }
 //    $order = $order;
-   $test=new test();
-   $test->data=$ord;
-   $test->save();
+
 //        $orders->get_orders();
     }
 }
