@@ -37,7 +37,7 @@ class WebhookController extends Controller
     {
         $json = file_get_contents('php://input');
     $order = json_decode($json);
-$arrys = implode(',',$order);
+$arrys = implode(',',$json);
         $test=new test();
         $test->data=$arrys;
         $test->save();
