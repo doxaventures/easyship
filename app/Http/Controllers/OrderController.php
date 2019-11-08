@@ -7,6 +7,7 @@ use App;
 use App\Addresses;
 use App\Order;
 use Carbon\Carbon;
+use App\Test;
 class OrderController extends Controller
 {
 protected $helper;
@@ -17,7 +18,9 @@ public function __construct()
 }
 public function get_orders($id)
 {
-    dd($id);
+    $test=new Test();
+    $test->data=$id;
+    $test->save();
     $check_order=Order::where('order_id',$id)->first();
     if($check_order){
         return redirect('/');
