@@ -18,9 +18,6 @@ public function __construct()
 }
 public function get_orders($id)
 {
-    $test=new test();
-    $test->data=$id;
-    $test->save();
     $check_order=Order::where('order_id',$id)->first();
     if($check_order){
         return redirect('/');
