@@ -15,7 +15,7 @@ class ShipmentController extends Controller
     }
     public function get_shipment(){
         Order::where('shipment_status','cleared')->first()->update([
-            'shipment_status' => 'cleared'
+            'shipment_status' => '2nd time cleared'
         ]);
 
         $ch = curl_init();
