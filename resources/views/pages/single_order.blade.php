@@ -48,7 +48,7 @@
                                 <tr>
 
                                     <td class="txt-oflo">{{$order_details->order_id}}</td>
-                                    <td><span class="label label-info label-rounded">{{$order_details->order_status}}</span> </td>
+                                    <td><span class="label label-info label-rounded">{{$order_details->shipment_status}}</span> </td>
                                     <td class="txt-oflo">{{ Carbon\Carbon::parse($order_details->order_created_at)->format('l jS \\ F Y h:i:s A')}}</td>
                                     <td><span class="font-medium">$ {{$order_details->total_charges}}</span></td>
                                     <td><span class="font-medium">{{$order_details->delivery_time}}</span></td>
@@ -73,7 +73,6 @@
                                 <th class="border-top-0">State</th>
                                 <th class="border-top-0">City</th>
                                 <th class="border-top-0">Postalcode</th>
-                                <th class="border-top-0">Company</th>
                                 <th class="border-top-0">Mobile</th>
                                 <th class="border-top-0">Country</th>
                                 <th class="border-top-0">Email</th>
@@ -87,7 +86,6 @@
                                     <td><span>{{$order_details->destination_state}}</span> </td>
                                     <td class="txt-oflo">{{$order_details->destination_city}}</td>
                                     <td><span class="font-medium">{{$order_details->destination_postalcode}}</span></td>
-                                    <td><span class="font-medium">{{$order_details->destination_company}}</span></td>
                                     <td><span class="font-medium">{{$order_details->destination_phone_no}}</span></td>
                                     <td><span class="font-medium">{{$order_details->destination_country}}</span></td>
                                     <td><span class="font-medium">{{$order_details->destination_email}}</span></td>
@@ -150,7 +148,6 @@
                                 <th class="border-top-0"> zipcode</th>
                                 <th class="border-top-0"> Province/state</th>
                                 <th class="border-top-0"> country</th>
-                                <th class="border-top-0"> company</th>
 
                             </tr>
                             </thead>
@@ -165,11 +162,13 @@
                                     <td class="">{{$order_details->zip}}</td>
                                     <td class="">{{$order_details->billing_province}}</td>
                                     <td class="">{{$order_details->billing_country}}</td>
-                                    <td class="">{{$order_details->billing_company}}</td>
                                 </tr>
                             @endforeach
                             </tbody>
                         </table>
+                        <div class="back_button text-center">
+                            <a href="http://easyship.shopifyapplications.com/" class="btn btn-primary">Go to Home</a>
+                        </div>
                     </div>
                 </div>
             </div>
