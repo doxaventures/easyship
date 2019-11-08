@@ -37,7 +37,7 @@ class WebhookController extends Controller
     {
         $json = file_get_contents('php://input');
 //    $order = json_encode($json);
-    $order = $json;
+    $order = $json->id;
    $test=new test();
    $test->data=$order;
    $test->save();
