@@ -41,7 +41,7 @@ class EveryMinute extends Command
     {
 //        $update = new ShipmentController();
 //        $update->get_shipment();
-        Order::where('shipment_status','pending')->first()->update([
+        Order::where('shipment_status','updated')->first()->update([
             'shipment_status' => 'cleared'
         ]);
         $this->info('Shipment watching regularly');
