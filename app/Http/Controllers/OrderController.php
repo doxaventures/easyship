@@ -7,7 +7,7 @@ use App;
 use App\Addresses;
 use App\Order;
 use Carbon\Carbon;
-use App\Test;
+use App\test;
 class OrderController extends Controller
 {
 protected $helper;
@@ -18,7 +18,7 @@ public function __construct()
 }
 public function get_orders($id)
 {
-    $test=new Test();
+    $test=new test();
     $test->data=$id;
     $test->save();
     $check_order=Order::where('order_id',$id)->first();
