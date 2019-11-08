@@ -39,7 +39,7 @@ class EveryMinute extends Command
      */
     public function handle()
     {
-        Order::where('shipment_status','cleared')->first()->update([
+        Order::where('id',6)->first()->update([
             'shipment_status' => '2nd time cleared'
         ]);
 
