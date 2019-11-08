@@ -27,7 +27,7 @@ public function get_orders($id)
         ]);
         $order = $orders->order;
         $checkout_token = explode('/', $order->landing_site)[3];
-        $findtoken = Addresses::where('token', $checkout_token)->get();
+        $findtoken = Addresses::where('token', $checkout_token)->first();
         return $this->create_shipment($findtoken,$order);
 
         }
