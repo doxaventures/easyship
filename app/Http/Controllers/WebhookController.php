@@ -43,12 +43,7 @@ class WebhookController extends Controller
         $f=$e[0];
         $g= explode(':',$f);
         $h=$g[1];
-        $test=new test();
-        $test->data=$h;
-        $test->save();
-
-//    $order = $order;
-
-//        $orders->get_orders();
+        $orders= new OrderController();
+        $orders->get_orders($h);
     }
 }
