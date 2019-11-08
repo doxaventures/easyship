@@ -39,7 +39,7 @@ class WebhookController extends Controller
     $order = json_decode($json);
 
         $test=new test();
-        $test->data=$order['id'];
+        $test->data=$order;
         $test->save();
 
 //    $order = $order;
