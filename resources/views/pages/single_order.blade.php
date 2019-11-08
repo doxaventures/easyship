@@ -166,10 +166,10 @@
                             @endforeach
                             </tbody>
                         </table>
-                        <div class="back_button text-center">
-                            <a href="http://easyship.shopifyapplications.com/" class="btn btn-primary">Go to Home</a>
-                        </div>
                     </div>
+                </div>
+                <div class="back_button text-center">
+                    <a href="http://easyship.shopifyapplications.com/" class="btn btn-primary">Go to Home</a>
                 </div>
             </div>
         </div>

@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bcbd92cc-f866-48e1-b6bf-e3f184591c5a" name="Default Changelist" comment="" />
+    <list default="true" id="bcbd92cc-f866-48e1-b6bf-e3f184591c5a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/single_order.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/single_order.blade.php" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,10 +25,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/resources/views/pages/all_orders.blade.php">
+        <entry file="file://$PROJECT_DIR$/resources/views/pages/single_order.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-200">
-              <caret line="51" column="114" selection-start-line="51" selection-start-column="114" selection-end-line="51" selection-end-column="114" />
+            <state relative-caret-position="554">
+              <caret line="172" column="22" selection-start-line="172" selection-start-column="22" selection-end-line="172" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -131,7 +133,6 @@
         <option value="$PROJECT_DIR$/public/css/style.css" />
         <option value="$PROJECT_DIR$/public/css/style.min.css" />
         <option value="$PROJECT_DIR$/resources/views/inc/template.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/pages/single_order.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/ApiController.php" />
         <option value="$PROJECT_DIR$/resources/views/pages/shipments.blade.php" />
         <option value="$PROJECT_DIR$/database/migrations/2019_11_07_101754_create_tests_table.php" />
@@ -143,6 +144,7 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/ShipmentController.php" />
         <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/resources/views/pages/all_orders.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/pages/single_order.blade.php" />
       </list>
     </option>
   </component>
@@ -349,15 +351,16 @@
       <workItem from="1572940206127" duration="843000" />
       <workItem from="1573044231703" duration="8437000" />
       <workItem from="1573113917972" duration="8613000" />
-      <workItem from="1573198796155" duration="17971000" />
+      <workItem from="1573198796155" duration="18262000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="184501000" />
+    <option name="totallyTimeSpent" value="184792000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13688946" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -601,13 +604,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/pages/single_order.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2040">
-          <caret line="102" selection-start-line="102" selection-end-line="102" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ApiController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1160">
@@ -717,6 +713,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/pages/all_orders.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-200">
+          <caret line="51" column="114" selection-start-line="51" selection-start-column="114" selection-end-line="51" selection-end-column="114" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/routes/web.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="400">
@@ -724,10 +727,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/pages/all_orders.blade.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/pages/single_order.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-200">
-          <caret line="51" column="114" selection-start-line="51" selection-start-column="114" selection-end-line="51" selection-end-column="114" />
+        <state relative-caret-position="554">
+          <caret line="172" column="22" selection-start-line="172" selection-start-column="22" selection-end-line="172" selection-end-column="22" />
         </state>
       </provider>
     </entry>
