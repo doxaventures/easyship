@@ -4,6 +4,7 @@ namespace App\Console\Commands;
 
 use App\Http\Controllers\ShipmentController;
 use Illuminate\Console\Command;
+use App\Order;
 
 class EveryMinute extends Command
 {
@@ -38,8 +39,11 @@ class EveryMinute extends Command
      */
     public function handle()
     {
-        $update = new ShipmentController();
-        $update->get_shipment();
+//        $update = new ShipmentController();
+//        $update->get_shipment();
+        Order::where('shipment_status','pending')->first()->update([
+            'shipment_status' => 'cleared'
+        ]);
         $this->info('Shipment watching regularly');
     }
 }
