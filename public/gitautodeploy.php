@@ -9,6 +9,7 @@ const GitUrl = "git@bitbucket.org:user22/repo_name.git";
 //Use this function to contact CW API
 function callCloudwaysAPI($method, $url, $accessToken, $post = [])
 {
+
     $baseURL = API_URL;
     $ch = curl_init();
     curl_setopt($ch, CURLOPT_CUSTOMREQUEST, $method);
