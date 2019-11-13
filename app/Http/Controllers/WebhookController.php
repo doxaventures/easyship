@@ -63,7 +63,7 @@ class WebhookController extends Controller
         ]);
         $id=$metafield->metafield->id;
         $value=$metafield->metafield->value;
-  $database = new Metafield();
+  $database = Metafield::where('metafield_id',11351611473999)->first();
    $database->metafield_id=$id;
    $database->value=$value;
    $database->save();
