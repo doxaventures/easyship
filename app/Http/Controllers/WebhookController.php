@@ -61,8 +61,8 @@ class WebhookController extends Controller
                 ]
             ]
         ]);
-        dd($metafield);
-  $database = new Metafield();
+        dd($metafield->metafield);
+  //$database = new Metafield();
 
 
     }
