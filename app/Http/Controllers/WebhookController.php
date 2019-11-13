@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Metafield;
 use Illuminate\Http\Request;
 use App\Order;
 use App\test;
@@ -61,6 +62,7 @@ class WebhookController extends Controller
             ]
         ]);
         dd($metafield);
+  $database = new Metafield();
 
 
     }
