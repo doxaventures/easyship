@@ -53,8 +53,7 @@ class WebhookController extends Controller
             'URL' => 'admin/api/2019-10/metafields.json',
             "DATA" => [
                 "metafield" => [
-                    "namespace" => "inventory",
-                     "key" => "warehouse",
+                    "id" => 11351611473999,
                     "value" => $value,
                     "value_type" => "integer"
                 ]
