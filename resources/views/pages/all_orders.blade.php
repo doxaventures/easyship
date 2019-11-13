@@ -36,9 +36,11 @@
                                     <div class="form-group">
                                         <div class="cutom_inline">
                                             <div class="row">
-                                                <div class="col-md-6">
-                                                    <p>Change Extra Percentage</p>
-                                                    <select class="form-control">
+                                                <div class="col-md-4">
+                                                    <label for="sel1">Change Extra Percentage</label>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <select class="form-control" id="sel1">
                                                         <option value="5">5%</option>
                                                         <option value="10">10%</option>
                                                         <option value="15">15%</option>
