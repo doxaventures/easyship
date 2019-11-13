@@ -33,4 +33,4 @@ Route::middleware('cors')->group(function () {
 Route::get('/webhooks/get','WebhookController@getwebhook');
 Route::get('/webhooks','WebhookController@webhook');
 Route::POST('/webhooks/create/order','WebhookController@webhook_order_create')->name('create_orders_webhook');
-Route::get('/upsales','WebhookController@upsales')->name('meta');
+Route::get('/upsales/{id}','WebhookController@upsales')->name('meta');
