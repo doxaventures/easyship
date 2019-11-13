@@ -67,6 +67,8 @@ class WebhookController extends Controller
    $database->metafield_id=$id;
    $database->value=$value;
    $database->save();
+   $update='Updated Successfully';
+        flash($update);
    return redirect('/');
 
     }
