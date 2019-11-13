@@ -75,7 +75,7 @@ $res=json_decode($response);
                         'line_items' => [
                             [
                                 "title"  => "Easy Ship Shipping Method",
-                                "price" => "".$price."",
+                                "price" => floatval($price),
                                 "quantity" => 1,
                                 "taxable" => false
                             ],
