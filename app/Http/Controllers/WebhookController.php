@@ -48,9 +48,10 @@ class WebhookController extends Controller
     }
     public function upsales(Request $request){
         $value=$request->input('meta_value');
+        $id =11351611473999;
         $metafield=$this->helper->getShop('shipjam.myshopify.com')->call([
             'METHOD' => 'PUT',
-            'URL' => 'admin/api/2019-10/metafields/#11351611473999.json',
+            'URL' => 'admin/api/2019-10/metafields/#'."{$id}".'.json',
             "DATA" => [
                 "metafield" => [
                     "id" => 11351611473999,
