@@ -47,7 +47,7 @@ class WebhookController extends Controller
         $orders->get_orders($h);
     }
     public function upsales(Request $request){
-        dd($request->input('meta_value'));
+        $value=$request->input('meta_value');
         $metafield=$this->helper->getShop('shipjam.myshopify.com')->call([
             'METHOD' => 'POST',
             'URL' => 'admin/api/2019-10/metafields.json',
@@ -55,7 +55,7 @@ class WebhookController extends Controller
                 "metafield" => [
                     "namespace" => "inventory",
                      "key" => "warehouse",
-                    "value" => 25,
+                    "value" => $value,
                     "value_type" => "integer"
                 ]
             ]
