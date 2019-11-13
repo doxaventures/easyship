@@ -14,6 +14,10 @@
         margin: auto;
         padding: 10px 10px;
     }
+    .cutom_inline{
+        display: inline-block;
+        margin-left: 10px;
+    }
 </style>
 @extends('inc.template')
 @section('extend_template_details')
@@ -23,21 +27,27 @@
                 <div class="card">
                     <div class="card-body">
                         <div class="row">
-                            <div class="col-md-6">
+                            <div class="col-md-10">
                                 <h4 class="card-title">Orders Details</h4>
                             </div>
 
-                                    <div class="col-md-6">
+                                    <div class="col-md-2">
                                         <form action="{{route('meta')}}" method="get">
                                         <div class="form-group">
-                                            <label for="sel1">Change Extra Percentage</label>
-                                            <select class="form-control" id="sel1">
-                                                <option value="5">5%</option>
-                                                <option value="10">10%</option>
-                                                <option value="15">15%</option>
-                                                <option value="20">20%</option>
-                                            </select>
-                                            <input type="submit" class="btn btn-primary" value="Change">
+                                            <div class="cutom_inline">
+                                                <label for="sel1">Change Extra Percentage</label>
+                                                <select class="form-control" id="sel1">
+                                                    <option value="5">5%</option>
+                                                    <option value="10">10%</option>
+                                                    <option value="15">15%</option>
+                                                    <option value="20">20%</option>
+                                                </select>
+                                            </div>
+                                            <div class="cutom_inline">
+                                                <input type="submit" class="btn btn-primary" value="Change">
+                                            </div>
+
+
                                         </div>
                                         </form>
 

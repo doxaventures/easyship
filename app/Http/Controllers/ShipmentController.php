@@ -70,7 +70,7 @@ public function delete_shipment($id){
     $res2=explode('"',$res1);
     $res3=$res2[6];
     if($res3 == "Couldn't find Shipment\\"){
-    $delete_shipment=Order::find($id);
+    $delete_shipment=Order::where('easy_shipment_id',$id);
     $delete_shipment->delete();
         return back();
     }
