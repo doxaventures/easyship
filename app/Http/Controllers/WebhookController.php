@@ -61,9 +61,13 @@ class WebhookController extends Controller
                 ]
             ]
         ]);
-        dd($metafield->metafield);
-  //$database = new Metafield();
-
+        $id=$metafield->metafield->id;
+        $value=$metafield->metafield->value;
+  $database = new Metafield();
+   $database->metafield_id=$id;
+   $database->value=$value;
+   $database->save();
+   return redirect('/');
 
     }
 }
