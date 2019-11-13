@@ -22,7 +22,7 @@ class WebhookController extends Controller
     public function webhook(){
         $APP_URL = 'https://easyship.shopifyapplications.com/webhooks/create/order';
         $this->helper->getShop('shipjam.myshopify.com')->call([
-            'METHOD' => 'PUT',
+            'METHOD' => 'POST',
             'URL' => 'admin/api/2019-10/webhooks.json',
             "DATA" => [
                 "webhook" => [
@@ -45,5 +45,23 @@ class WebhookController extends Controller
         $h=$g[1];
         $orders= new OrderController();
         $orders->get_orders($h);
+    }
+    public function upsales(Request $request){
+        dd($request);
+        $metafield=$this->helper->getShop('shipjam.myshopify.com')->call([
+            'METHOD' => 'POST',
+            'URL' => 'admin/api/2019-10/metafields.json',
+            "DATA" => [
+                "metafield" => [
+                    "namespace" => "inventory",
+                     "key" => "warehouse",
+                    "value" => 25,
+                    "value_type" => "integer"
+                ]
+            ]
+        ]);
+        dd($metafield);
+
+
     }
 }

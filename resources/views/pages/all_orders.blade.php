@@ -22,7 +22,27 @@
             <div class="col-12">
                 <div class="card">
                     <div class="card-body">
-                        <h4 class="card-title">Orders Details</h4>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h4 class="card-title">Orders Details</h4>
+
+                                <form action="{{route('meta')}}" method="get">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="sel1">Change Extra Percentage</label>
+                                            <select class="form-control" id="sel1">
+                                                <option value="5">5%</option>
+                                                <option value="10">10%</option>
+                                                <option value="15">15%</option>
+                                                <option value="20">20%</option>
+                                            </select>
+                                            <input type="submit" class="btn btn-primary" value="Change">
+                                        </div>
+                                    </div>
+                                </form>
+
+                        </div>
+
                         @if(flash()->message)
                             <div class="text-center messages" style="text-align: center;">
                                 <ul class="">
