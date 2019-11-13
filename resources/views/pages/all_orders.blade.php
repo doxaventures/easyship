@@ -27,11 +27,11 @@
             <div class="card">
                 <div class="card-body">
                     <div class="row">
-                        <div class="col-md-10">
+                        <div class="col-md-9">
                             <h4 class="card-title">Orders Details</h4>
                         </div>
 
-                                <div class="col-md-2">
+                                <div class="col-md-3">
                                     <form action="{{route('meta')}}" method="get">
                                     <div class="form-group">
                                         <div class="cutom_inline">
@@ -40,14 +40,14 @@
                                                     <label for="sel1">Change Extra Percentage</label>
                                                 </div>
                                                 <div class="col-md-4">
-                                                    <select class="form-control" id="sel1">
+                                                    <select class="form-control" id="sel1" name="meta_value">
                                                         <option value="5">5%</option>
                                                         <option value="10">10%</option>
                                                         <option value="15">15%</option>
                                                         <option value="20">20%</option>
                                                     </select>
                                                 </div>
-                                                <div class="col-md-6">
+                                                <div class="col-md-4">
                                                     <div class="cutom_inline">
                                                         <input type="submit" class="btn btn-primary" value="Change">
                                                     </div>
