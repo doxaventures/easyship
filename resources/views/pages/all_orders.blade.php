@@ -25,9 +25,10 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <h4 class="card-title">Orders Details</h4>
+                            </div>
 
-                                <form action="{{route('meta')}}" method="get">
                                     <div class="col-md-6">
+                                        <form action="{{route('meta')}}" method="get">
                                         <div class="form-group">
                                             <label for="sel1">Change Extra Percentage</label>
                                             <select class="form-control" id="sel1">
@@ -38,8 +39,9 @@
                                             </select>
                                             <input type="submit" class="btn btn-primary" value="Change">
                                         </div>
+                                        </form>
+
                                     </div>
-                                </form>
 
                         </div>
 
